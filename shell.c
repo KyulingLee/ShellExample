@@ -123,7 +123,7 @@ int main()
 
 	while (-1)
 	{
-		printf("%s $ ", get_current_dir_name());
+		printf("%s $ ", getcwd(line, 1024));
 		fgets(line, sizeof(line) - 1, stdin);
 		if (run(line) == false)
 			break;
